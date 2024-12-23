@@ -1,0 +1,155 @@
+/* Team Member Page Styles */
+.team-member-page {
+    padding-top: 0;
+}
+
+/* Header Section */
+.member-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=1950');
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 80px;
+    text-align: center;
+    color: white;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.member-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.member-header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.member-header p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* Content Section */
+.member-content {
+    padding: 0 0 100px;
+    background-color: var(--white);
+}
+
+.member-profile {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.member-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.member-info {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.bio-section h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.bio-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.booking-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.booking-btn:hover {
+    background-color: var(--brand-light-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .member-profile {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .member-profile {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+
+    .member-image {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .member-header {
+        padding: 120px 0 60px;
+    }
+
+    .member-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .member-header p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-header {
+        padding: 100px 0 50px;
+    }
+
+    .member-header h1 {
+        font-size: 2rem;
+    }
+
+    .member-info {
+        padding: 30px;
+    }
+
+    .bio-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .bio-section p {
+        font-size: 1rem;
+    }
+} 
