@@ -93,7 +93,8 @@ function initializeNavigation() {
 
     // Handle submenu toggles on mobile
     submenuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
+        const menuLink = item.querySelector('a');
+        menuLink.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 item.classList.toggle('active');
