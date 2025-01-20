@@ -6,58 +6,70 @@ export default function Home() {
   const content = siteContent.home
 
   return (
-    <main className="min-h-screen pt-16">
-      <section className="relative h-[calc(100vh-4rem)] flex items-center justify-center bg-black">
-        <div className="absolute inset-0 z-0">
+    <main className="min-h-screen pt-24">
+      <section className="relative min-h-[calc(100vh-6rem)] flex items-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
+        <div className="absolute top-0 left-0 w-1/2 h-full md:block hidden">
           <Image
             src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"
-            alt="Hero background"
+            alt="Divine Design Wellness"
             fill
             className="object-cover"
             style={{ filter: 'brightness(0.5)' }}
             priority
           />
         </div>
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">{content.hero.title}</h1>
-          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
-            {content.hero.description}
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            {content.hero.ctaButton}
-          </Link>
+        <div className="container mx-auto px-6 relative">
+          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
+            <div className="relative min-h-[50vh] md:h-auto block md:hidden -mx-6">
+              <Image
+                src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"
+                alt="Divine Design Wellness"
+                fill
+                className="object-cover"
+                style={{ filter: 'brightness(0.5)' }}
+                priority
+              />
+            </div>
+            <div className="hidden md:block" aria-hidden="true"></div>
+            <div className="flex flex-col justify-center items-center h-full md:pl-16 lg:pl-24 py-12 md:py-0">
+              <div className="max-w-lg w-full">
+                <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 text-center">{content.hero.title}</h1>
+                <p className="text-xl text-slate-600 mb-8 text-center">
+                  {content.hero.description}
+                </p>
+                <div className="text-center">
+                  <Link 
+                    href="/contact" 
+                    className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    {content.hero.ctaButton}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="py-20" id="about">
+      <section className="py-24 bg-gray-50" id="about">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">{content.about.title}</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xl mb-6">
-                {content.about.mainText}
-              </p>
-              <p className="mb-8">
-                {content.about.subText}
-              </p>
-              <Link 
-                href="/about"
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                {content.about.ctaButton}
-              </Link>
-            </div>
-            <div className="relative h-[400px]">
-              <Image
-                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca"
-                alt="Divine Design Wellness Facility"
-                fill
-                className="object-cover rounded-lg"
-              />
-            </div>
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">{content.about.title}</h2>
+            <div className="h-1 w-24 bg-blue-600 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              {content.about.mainText}
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Link 
+              href="/about"
+              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors border border-blue-200"
+            >
+              {content.about.ctaButton}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

@@ -13,9 +13,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md shadow-lg">
       <nav className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center py-3">
-            <div className="relative w-20 h-20">
+        <div className="flex items-center justify-between h-32">
+          <Link href="/" className="flex items-center">
+            <div className="relative w-52 h-52">
               <Image
                 src="/favicon.png"
                 alt={content.logo.alt}

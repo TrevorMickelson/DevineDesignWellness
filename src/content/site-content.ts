@@ -233,12 +233,12 @@ export const siteContent = {
   home: {
     hero: {
       title: "Divine Design Wellness",
-      description: "Optimize your health, starting today. Contact us to schedule your consultation and discover the transformative benefits of hormone pellet therapy, nutraceuticals and peptide therapy, and IV therapy.",
+      description: "Divine Design Wellness is located in Decatur TX, and is part of the Empowered Life collective.",
       ctaButton: "Contact Us"
     },
     about: {
       title: "About Us",
-      mainText: "At Divine Design Wellness, we deliver transformative healthcare through an integrative approach that combines advanced medical science with personalized attention.",
+      mainText: "At Divine Design Wellness, our goal is to enrich lives by focusing on hormone balance and optimization. We're driven to achieve optimal health for both ourselves and our patients. Our commitment is rooted in an integrated, functional approach—examining and addressing the underlying causes of health issues rather than simply alleviating symptoms.",
       subText: "Our commitment to excellence in hormone optimization, regenerative medicine, and aesthetic treatments is backed by years of clinical expertise and cutting-edge technology.",
       ctaButton: "Learn More About Us"
     },
@@ -346,7 +346,13 @@ export const siteContent = {
         ]
       },
       conclusion: "Our expertise spans hormone optimization, regenerative medicine, aesthetic treatments, and wellness therapies. We leverage the latest medical advancements while maintaining a patient-centered approach, ensuring that each treatment plan is as unique as the individual it serves."
-    }
+    },
+    mainText: "At Divine Design Wellness, our goal is to enrich lives by focusing on hormone balance and optimization. We're driven to achieve optimal health for both ourselves and our patients. Our commitment is rooted in an integrated, functional approach—examining and addressing the underlying causes of health issues rather than simply alleviating symptoms.",
+    values: [
+      "Integrative Healthcare Excellence",
+      "Personalized Patient Care",
+      "Advanced Treatment Solutions"
+    ]
   },
 
   // Teams Page
