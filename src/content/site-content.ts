@@ -6,7 +6,6 @@ export const siteContent = {
     },
     navigation: [
       { text: "Home", href: "/" },
-      { text: "About", href: "/about" },
       { text: "Services", href: "/services" },
       { text: "Nutraceuticals", href: "/nutraceuticals" },
       { text: "Our Team", href: "/teams" },
@@ -248,7 +247,7 @@ export const siteContent = {
       teamMembers: [
         {
           name: "Olivia",
-          role: "Practice Manager",
+          role: "Women's Health Nurse Practitioner",
           image: "/assets/Olivia.JPEG"
         },
         {
@@ -323,6 +322,28 @@ export const siteContent = {
           availableDate: "March 2025"
         }
       ]
+    },
+    nutraceuticals: {
+      title: "Nutraceuticals",
+      subtitle: "Premium supplements and wellness products to support your health journey",
+      featured: [
+        {
+          title: "Hormone Support",
+          description: "Natural supplements designed to support hormone balance and optimization.",
+          link: "/nutraceuticals#hormone-support"
+        },
+        {
+          title: "Immune Health",
+          description: "Boost your immune system with our carefully selected supplements.",
+          link: "/nutraceuticals#immune-health"
+        },
+        {
+          title: "Energy & Vitality",
+          description: "Premium supplements to enhance your energy levels and overall vitality.",
+          link: "/nutraceuticals#energy"
+        }
+      ],
+      viewAllText: "View All Products"
     }
   },
 
@@ -364,21 +385,16 @@ export const siteContent = {
     teamMembers: [
       {
         name: "Olivia",
-        role: "Practice Manager",
+        role: "Nurse Practitioner",
         image: "/assets/Olivia.JPEG",
-        bio: "Olivia serves as our Practice Manager, ensuring smooth operations and exceptional patient care. Her organizational skills and commitment to patient satisfaction help create a welcoming and efficient healthcare environment.",
-        specialties: [
-          "Practice Management",
-          "Patient Care Coordination",
-          "Healthcare Administration",
-          "Patient Relations"
-        ]
+        bio: "Women's Health Nurse Practitioner",
+        specialties: []
       },
       {
         name: "Kelly",
         role: "Nurse Practitioner",
         image: "/assets/Kelly.JPEG",
-        bio: "Kelly is a dedicated Nurse Practitioner with extensive experience in hormone optimization and wellness. Her patient-centered approach and deep understanding of integrative medicine help create personalized treatment plans that deliver real results.",
+        bio: "Family Nurse Practitioner, Certified Nurse Midwife",
         specialties: [
           "Hormone Optimization",
           "Thyroid Management",
@@ -386,7 +402,36 @@ export const siteContent = {
           "Women's Health"
         ]
       }
-    ]
+    ],
+    empoweredTeam: {
+      title: "Empowered Life Team",
+      members: [
+        {
+          name: "Dr. Ericka",
+          role: "Chiropractor & Owner",
+          image: "/assets/Dr._Ericka.png",
+          link: "#"
+        },
+        {
+          name: "Dr. Paris",
+          role: "Occupational Therapist",
+          image: "/assets/Dr._Paris.png",
+          link: "#"
+        },
+        {
+          name: "Marissa",
+          role: "Director of First impressions",
+          image: "/assets/Marissa.png",
+          link: "#"
+        },
+        {
+          name: "Alicia",
+          role: "Licensed Professional Counselor",
+          image: "/assets/Alicia_Wimsatt.png",
+          link: "#"
+        }
+      ]
+    }
   },
 
   // Contact Page

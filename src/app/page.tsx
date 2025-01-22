@@ -14,7 +14,6 @@ export default function Home() {
             alt="Divine Design Wellness"
             fill
             className="object-cover"
-            style={{ filter: 'brightness(0.5)' }}
             priority
           />
         </div>
@@ -26,7 +25,6 @@ export default function Home() {
                 alt="Divine Design Wellness"
                 fill
                 className="object-cover"
-                style={{ filter: 'brightness(0.5)' }}
                 priority
               />
             </div>
@@ -34,15 +32,21 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center h-full md:pl-16 lg:pl-24 py-12 md:py-0">
               <div className="max-w-lg w-full">
                 <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 text-center">{content.hero.title}</h1>
-                <p className="text-xl text-slate-600 mb-8 text-center">
+                <p className="text-xl text-slate-600 mb-6 text-center">
                   {content.hero.description}
+                </p>
+                <p className="text-lg text-slate-600 mb-8 text-center leading-relaxed">
+                  {content.about.mainText}
                 </p>
                 <div className="text-center">
                   <Link 
                     href="/contact" 
-                    className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-sm hover:shadow"
                   >
                     {content.hero.ctaButton}
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
               </div>
@@ -51,53 +55,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-50" id="about">
+      {/* Services Section */}
+      <section className="py-24 bg-gray-50" id="services">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">{content.about.title}</h2>
-            <div className="h-1 w-24 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-700 leading-relaxed">
-              {content.about.mainText}
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{content.services.title}</h2>
+            <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              {content.services.subtitle}
             </p>
           </div>
-          <div className="flex justify-center">
-            <Link 
-              href="/about"
-              className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors border border-blue-200"
-            >
-              {content.about.ctaButton}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-gray-50" id="services">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-4">{content.services.title}</h2>
-          <p className="text-xl text-center text-gray-600 mb-12">
-            {content.services.subtitle}
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {content.services.featured.map((service, index) => (
               <Link 
                 key={index}
                 href={service.link}
-                className="block bg-white rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl"
+                className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
               >
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 flex items-center justify-between">
-                    {service.title}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {service.title}
+                    </h3>
                     {service.comingSoon && (
-                      <span className="text-sm font-medium px-3 py-1 bg-blue-100 text-blue-800 rounded-full">
+                      <span className="text-sm font-medium px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
                         Coming {service.availableDate}
                       </span>
                     )}
-                  </h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </div>
               </Link>
             ))}
@@ -105,39 +91,57 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link 
               href="/services"
-              className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               {content.services.viewAllText}
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Nutraceuticals Section */}
-      <section className="py-20" id="nutraceuticals">
+      <section className="py-24 bg-white" id="nutraceuticals">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-4">{siteContent.nutraceuticals.hero.title}</h2>
-          <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            {siteContent.nutraceuticals.description}
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {siteContent.nutraceuticals.products.slice(0, 6).map((product, index) => (
-              <div 
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{content.nutraceuticals.title}</h2>
+            <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              {content.nutraceuticals.subtitle}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {content.nutraceuticals.featured.map((product, index) => (
+              <Link 
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+                href={product.link}
+                className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
               >
-                <h3 className="text-xl font-semibold mb-2 text-blue-600">{product.name}</h3>
-                <p className="text-gray-600">{product.description}</p>
-              </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {product.title}
+                    </h3>
+                    {product.comingSoon && (
+                      <span className="text-sm font-medium px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
+                        Coming {product.availableDate}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{product.description}</p>
+                </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
             <Link 
               href="/nutraceuticals"
-              className="inline-flex items-center justify-center text-blue-600 font-semibold hover:text-blue-800 transition-colors gap-2"
+              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
-              View All Products
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {content.nutraceuticals.viewAllText}
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
