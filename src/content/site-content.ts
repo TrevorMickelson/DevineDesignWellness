@@ -39,8 +39,13 @@ export const siteContent = {
       title: "Connect With Us",
       description: "Follow us on social media for wellness tips, updates, and inspiration.",
       socialLinks: [
-        { platform: "Facebook", href: "#", ariaLabel: "Follow us on Facebook" },
-        { platform: "Instagram", href: "#", ariaLabel: "Follow us on Instagram" }
+        { 
+          platform: "Facebook", 
+          href: "https://m.facebook.com/6156192790759/", 
+          ariaLabel: "Follow us on Facebook",
+          target: "_blank",
+          rel: "noopener noreferrer"
+        }
       ]
     },
     legal: {
@@ -408,26 +413,26 @@ export const siteContent = {
       members: [
         {
           name: "Dr. Ericka",
-          role: "Chiropractor & Owner",
+          role: "Chiropractor",
           image: "/assets/Dr._Ericka.png",
-          link: "#"
+          link: "https://www.empoweredlife-chiro.com/"
         },
         {
           name: "Dr. Paris",
           role: "Occupational Therapist",
           image: "/assets/Dr._Paris.png",
-          link: "#"
-        },
-        {
-          name: "Marissa",
-          role: "Director of First impressions",
-          image: "/assets/Marissa.png",
-          link: "#"
+          link: "https://www.functionalflower.com/"
         },
         {
           name: "Alicia",
           role: "Licensed Professional Counselor",
           image: "/assets/Alicia_Wimsatt.png",
+          link: "https://couchtalkcounseling.com/"
+        },
+        {
+          name: "Marissa",
+          role: "Director of First impressions",
+          image: "/assets/Marissa.png",
           link: "#"
         }
       ]

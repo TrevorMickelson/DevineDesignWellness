@@ -8,23 +8,23 @@ export default function Home() {
   return (
     <main className="min-h-screen pt-24">
       <section className="relative min-h-[calc(100vh-6rem)] flex items-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
-        <div className="absolute top-0 left-0 w-1/2 h-full md:block hidden">
+        <div className="absolute top-0 left-0 w-1/2 h-[calc(100vh-6rem)] md:block hidden">
           <Image
-            src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"
+            src="/assets/Kelly_And_Olivia_1.JPEG"
             alt="Divine Design Wellness"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
         </div>
         <div className="container mx-auto px-6 relative">
-          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-4rem)]">
+          <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-6rem)]">
             <div className="relative min-h-[50vh] md:h-auto block md:hidden -mx-6">
               <Image
-                src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"
+                src="/assets/Kelly_And_Olivia_1.JPEG"
                 alt="Divine Design Wellness"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>
