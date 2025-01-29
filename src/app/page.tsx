@@ -77,11 +77,6 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                       {service.title}
                     </h3>
-                    {service.comingSoon && (
-                      <span className="text-sm font-medium px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
-                        Coming {service.availableDate}
-                      </span>
-                    )}
                   </div>
                   <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </div>
@@ -124,11 +119,6 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                       {product.title}
                     </h3>
-                    {product.comingSoon && (
-                      <span className="text-sm font-medium px-3 py-1 bg-blue-50 text-blue-600 rounded-full">
-                        Coming {product.availableDate}
-                      </span>
-                    )}
                   </div>
                   <p className="text-gray-600 leading-relaxed">{product.description}</p>
                 </div>
