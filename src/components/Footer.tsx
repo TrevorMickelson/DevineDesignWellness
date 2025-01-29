@@ -65,12 +65,6 @@ export default function Footer() {
                   {content.contactInfo.phone}
                 </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <i className="fas fa-clock text-gray-300"></i>
-                <span className="text-sm text-gray-300">
-                  {content.contactInfo.hours}
-                </span>
-              </li>
             </ul>
           </div>
 

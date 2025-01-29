@@ -1,24 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { siteContent } from '@/content/site-content'
 
 export default function FAQ() {
   const content = siteContent.faq
-  const [openCategories, setOpenCategories] = useState<number[]>([0]) // First category open by default
   const [openQuestions, setOpenQuestions] = useState<{[key: string]: boolean}>({
-    'What if I\'ve had breast cancer?': true // First question open by default
+    'What is EvexiPEL?': true // First question open by default
   })
-
-  const toggleCategory = (index: number) => {
-    setOpenCategories(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    )
-  }
 
   const toggleQuestion = (question: string) => {
     setOpenQuestions(prev => ({
@@ -40,47 +30,28 @@ export default function FAQ() {
       {/* FAQ Content */}
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="space-y-8">
-            {content.categories.map((category, categoryIndex) => (
-              <div 
-                key={categoryIndex}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleCategory(categoryIndex)}
-                  className="w-full px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
-                >
-                  <h2 className="text-xl font-semibold text-gray-900">{category.title}</h2>
-                  <span className="transform transition-transform duration-200">
-                    <i className={`fas fa-chevron-down ${openCategories.includes(categoryIndex) ? 'rotate-180' : ''}`}></i>
-                  </span>
-                </button>
-                
-                {openCategories.includes(categoryIndex) && (
-                  <div className="divide-y divide-gray-200">
-                    {category.questions.map((item, questionIndex) => (
-                      <div key={questionIndex} className="border-t border-gray-200">
-                        <button
-                          onClick={() => toggleQuestion(item.question)}
-                          className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                        >
-                          <h3 className="text-lg font-medium text-gray-900 text-left">{item.question}</h3>
-                          <span className="transform transition-transform duration-200">
-                            <i className={`fas fa-chevron-down ${openQuestions[item.question] ? 'rotate-180' : ''}`}></i>
-                          </span>
-                        </button>
-                        
-                        {openQuestions[item.question] && (
-                          <div className="px-6 pb-4">
-                            <p className="text-gray-600 prose max-w-none">{item.answer}</p>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="divide-y divide-gray-200">
+              {content.questions.map((item, questionIndex) => (
+                <div key={questionIndex} className="border-t first:border-t-0">
+                  <button
+                    onClick={() => toggleQuestion(item.question)}
+                    className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <h2 className="text-lg font-medium text-gray-900 text-left">{item.question}</h2>
+                    <span className="transform transition-transform duration-200">
+                      <i className={`fas fa-chevron-down ${openQuestions[item.question] ? 'rotate-180' : ''}`}></i>
+                    </span>
+                  </button>
+                  
+                  {openQuestions[item.question] && (
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-600 prose max-w-none">{item.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* CTA Section */}

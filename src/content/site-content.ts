@@ -32,8 +32,7 @@ export const siteContent = {
       address: {
         lines: ["100 W. Walnut", "Decatur, TX"]
       },
-      phone: "(940) 268-4412",
-      hours: "Mon-Fri: 9:00 AM - 5:00 PM"
+      phone: "(940) 268-4412"
     },
     connect: {
       title: "Connect With Us",
@@ -63,23 +62,50 @@ export const siteContent = {
       title: "Frequently Asked Questions",
       subtitle: "Find answers to common questions about our services and treatments."
     },
-    categories: [
+    questions: [
       {
-        title: "General Questions",
-        questions: [
-          {
-            question: "What if I've had breast cancer?",
-            answer: "Our approach to hormone therapy for breast cancer survivors is highly personalized and carefully considered. We conduct comprehensive evaluations, review your complete medical history, and work closely with your oncology team. While some forms of hormone therapy may not be suitable, we offer various alternative wellness treatments and can develop a safe, effective plan tailored to your specific situation and recovery journey."
-          }
-        ]
+        question: "What is EvexiPEL?",
+        answer: "EvexiPEL is the flagship therapy of EVEXIAS Health Solutions. This method delivers life-changing bioidentical hormone therapy. EVEXIAS achieves this exclusively through strategic partnership with a leading compounding pharmacy and FDA-registered 503B outsourcing facility. This comprehensive approach combines physiological principles with innovative techniques to optimize hormone levels in both women and men."
       },
       {
-        title: "Treatment & Services",
-        questions: []
+        question: "How do I know if I'm a candidate for pellets?",
+        answer: "If you experience a combination of fatigue, depressed mood, and lower/absent libido, you may have Androgen Insufficiency Syndrome (AIS). Hormone Replacement Therapy (HRT) is a highly effective treatment for AIS. Additionally, if you prefer a minimally invasive procedure every 3-4 months (4-6 months for men), you are an ideal candidate. Other symptoms that often improve with bio-identical hormone optimization include insomnia, early waking, anxiety, lack of energy/drive, lethargy, joint pain, and daytime sleepiness."
       },
       {
-        title: "Appointments & Scheduling",
-        questions: []
+        question: "Do I have blood work done before each treatment?",
+        answer: "Initial bloodwork is performed to establish baseline hormone levels, aid in diagnosing AIS, and assess any imbalances in other major hormone systems (e.g., adrenal, thyroid). These values will help determine your initial dosage. Four weeks after your first pellet insertion, you will have repeat labs (a smaller panel). These results will be reviewed at your six-week follow-up visit. Thereafter, a full panel of labs is drawn annually. If you experience any significant changes in symptoms related to hormone therapy, your nurse practitioner will recommend reassessment at that time."
+      },
+      {
+        question: "What are the pellets made from?",
+        answer: "The EvexiPEL method features the patented pellet that is plant based and derived from yams and designed to be an exact replication of what the body produces in contrast to synthetic hormones. This pellet is specifically designed to improve patient comfort and deliver sustained, steady dosing throughout the treatment cycle."
+      },
+      {
+        question: "How long will the treatment last?",
+        answer: "For women, the effects typically last an average of 3-4 months. Very active individuals may require therapy every 3 months or sooner, while less active or elderly individuals may experience benefits for longer than 4 months. In men, the typical cycle ranges from 4-6 months. The return of early symptoms of hormone insufficiency, such as fatigue, joint pain, or decreased libido, can indicate the need for your next insertion."
+      },
+      {
+        question: "Is the therapy FDA approved?",
+        answer: "The individual ingredients within the pellets are FDA-approved, and the distribution of these pellets is regulated by the FDA. However, the pellet insertion procedure itself is not FDA-approved. It's common for physicians to prescribe medications or therapies for uses not explicitly approved by the FDA (off-label) if they believe them to be safe and effective for their patients. The reason bio-identical hormones (compounded drugs) are not FDA-approved is due to their individualized dosing nature."
+      },
+      {
+        question: "How are they administered?",
+        answer: "Pellets are inserted using a very minor surgical procedure, performed in the office setting and requiring only local anesthesia. Using a very small incision (~ 1-2 cm in women, ~ 3-4 cm in men), they are inserted subcutaneously below the belt and above the buttock in women, and in the posterior flank in men. Recovery is very quick and uncomplicated; exercise restrictions for 3 days in women and 5 days in men are simply to avoid complications."
+      },
+      {
+        question: "Does it matter if I'm on birth control?",
+        answer: "Not at all. Certain types may have an influence on therapy, which your physician/provider will review with you."
+      },
+      {
+        question: "Are there any side effects?",
+        answer: "There are no serious or permanent side effects. In some cases, nuisance side effects can occur, such as hair growth or acne, both of which are very treatable."
+      },
+      {
+        question: "What if I'm already on some form of HRT, like creams, patches, or pills?",
+        answer: "Transitioning to pellet therapy from other forms of HRT is common. Your physician can assess your needs even if you're currently using another type of hormone replacement therapy. If you prefer to continue with your current HRT but are not ready for pellets, we can offer alternative formulations."
+      },
+      {
+        question: "What if I've had breast cancer?",
+        answer: "There is no direct causative link between bio-identical estrogen, progesterone, and breast cancer. The Women's Health Initiative (WHI) study in 2003 raised concerns about 'hormones and breast cancer,' but a long-term follow-up study published in JAMA in 2017 by one of the original WHI authors found no increased mortality from breast cancer in the subjects over an 18-year period. The number of patients receiving HRT 5 to 10 years after breast cancer treatment and remission is increasing. However, hormone use in patients with a history of hormone-receptor-positive tumors is not yet considered standard care. The decision to use hormones in this situation is an informed one that the patient must make for herself. Finally, patients with or recently recovered from breast cancer can receive testosterone alone to help manage both AIS and menopausal symptoms."
       }
     ],
     cta: {
@@ -99,59 +125,59 @@ export const siteContent = {
     products: [
       {
         name: "QuiCalm",
-        description: "Stress and anxiety support supplement"
+        description: "Helps to reduce the feelings of stress and anxiety, as well as reduce stress related food cravings. QuiCalm contains Relora (extract containing Magnolia officinails and Phellodendron amurense barks), holy basil leaf extract and L-theanine. Good for adrenal fatigue and anxiety. This supplement can be taken up to three times a day"
       },
       {
         name: "Cognitive Ultra W/ Relora",
-        description: "Advanced cognitive function support"
+        description: "Supports stress management, appetite control and mood balance. This supplement uses the adaptogenec and neurotonic benefits of Bacopa extra with Relora to support a calm state. This supplement helps stabilize cortisol (the stress hormone), regulates melatonin, increase concentration, and has been shown to reduce stress related cravings."
       },
       {
         name: "Synapsin LPT",
-        description: "Neural support formula"
+        description: "Bioavailable peptide that supports cognitive function, mental focus, clarity and overall wellbeing. Key benefits include mental agility and focus, energy support and antioxidant protection. Simply chew and swallow 1/2 1 tablet daily."
       },
       {
         name: "Evexias SLEEP",
-        description: "Natural sleep support supplement"
+        description: "A comprehensive supplement designed to support restful and quality sleep without the morning grogginess. This supplement uses valerian root, magnolia bark, GABA, 5-HTP and melatonin. Using antioxidants and compounds, this supplement maximizes the sleep cycle and promotes restful, restorative sleep without AM drowsiness."
       },
       {
         name: "DIM 150 MG",
-        description: "Hormone balance support"
+        description: "Supports homonoal balanec and weight management in men and women. This supplement is a natural way to maintain proper estrogen metabolism-giving you proper hormone balance and preventing estrogen dominance. This supplement is recommend twice a day for men and once a day for women.f"
       },
       {
         name: "ADK",
-        description: "Essential vitamins A, D, and K supplement"
+        description: "This suppluement includes vitamin A, D3 and K2. These help supporrt bone and density and structure, calcium utilization and cardiovascular health. Vitamin A and D support bone building and help minimize bone breakdown cells. Vitamin K2 helps calcium deposition into the bones and helps blood vessels maintain elasticity."
       },
       {
         name: "Complete Mag",
-        description: "Comprehensive magnesium formula"
+        description: "Three forms of magnesium (Taurate, Glycinate, Malate) to help promote the absorption of metabolism of calcium, as well as the metabolic processes that aid in neuromuscular, cardiac and acid-base balance in the body. Magnesium supports hormone balance, glucose metabolism, bone health, mental health, gastrointestinal regularity and cardiovascular health."
       },
       {
         name: "Thyroid Support",
-        description: "Natural thyroid function support"
+        description: "You should take Thyroid support to help maintain healthy thyroid function, which is essential for regulating metabolism, energy levels, and overall well-being. This supplement contains key nutrients like iodine, selenium, and L-tyrosine, which suppor thyroid hormone production and balance. It provides a convenient way to suppor toptimal thyroid health and adderss potential deficiencies that can affect metabolism and energy."
       },
       {
         name: "GI Guard",
-        description: "Digestive health support"
+        description: "You should take GI Guard to promote digestive health and support a balanced gut microbiome. This supplement includes ingredients like probiotics, prebiotics, and soothing herbs such as ale vera and slippery elm, which can help maintain gastrointestinal comfort and function. It provides a convenient way to support overall digestiev wellness and alleviate symptoms of occasional digestive discomfort."
       },
       {
         name: "Iodine Complete",
-        description: "Complete iodine supplementation"
+        description: "You should take Iodine Complete to ensure adequate iodine levels, which are crucial for thyroid hormone production and regulation. This supplement combines iodine with selenium and other essential nutrients to support thyroid function and overall metabolic health. It provides a convenient way to maintain optimal iodine levels, which are essential for maintaining energy levels, metabolism, and overall well-being."
       },
       {
         name: "Glutathione LPT",
-        description: "Antioxidant support formula"
+        description: "One of the most present antioxidants in the body, this supplement shields from oxidative damage, aids in detoxifications and anti-inflammatory support and boosts the imunte system. This is a liposomal chewable tablet for enhanced efficacy and bioavailability."
       },
       {
         name: "INFLAM-X LPT",
-        description: "Inflammation support supplement"
+        description: "Targets inflammation and oxidative stress by harnessing tetrahydrocurcuminoids (compounds from the root of turmeric). THCs are more chemically stable and bioavailable, making them superior to curcumin alone in anti-inflammatory and antioxidant agency. Inflam-X helps curb chronic inflammation, speed sports recovery, protects the liver, manages blood sugar and exerts anti-cancer and anti-aging effects."
       },
       {
         name: "IMMUNO-T LPT",
-        description: "Immune system support"
+        description: "You should take Immuno-T LPT to strengthen your imune system with its powerful blend of vitamin C, zinc, elderberry extract, and echinacea. This supplement helps support your body's defenses against infections and promotes overall immune health. It's a convenient way to ensure you're giving your immune system the nutrients it needs to stay strong and resilient."
       },
       {
         name: "NAC 500",
-        description: "Antioxidant and respiratory support"
+        description: "You should take NAC 500 to support respiratory health and detoxification processes in your body. N-acetylcysteine (NAC) is a potent antioxidant that helps replenish glutathione levels, crucial for combating oxidative stress and supporting immune function. This upplement offers a convenient way to promote overall well-being and protect against environmental toxins and pollutants."
       }
     ]
   },
@@ -179,14 +205,13 @@ export const siteContent = {
       {
         id: "thyroid",
         title: "Thyroid",
-        description: "Expert thyroid management using advanced diagnostics and personalized treatment plans. We address both hypothyroid and hyperthyroid conditions with a comprehensive approach to restore optimal thyroid function.",
+        description: "A dietary supplement to support thyroid function and health. This is a vegetarian blend of Tyrosine with herbal extracts, vitamins and minerals, not found in other supplements, and includes patented ForsLean Coleius forkskohlii to support the maintenance and proper function of a healthy thyroid.",
         image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118",
         benefits: [
-          "Balanced metabolism",
-          "Improved energy",
-          "Weight management",
-          "Better temperature regulation",
-          "Enhanced mental clarity"
+          "Appetite and weight management",
+          "Energy",
+          "Mood",
+          "Production of thyroid hormones T3 (Triiodothyronine) and T4 (Thyroxine)"
         ]
       },
       {
@@ -245,6 +270,18 @@ export const siteContent = {
       mainText: "At Divine Design Wellness, our goal is to enrich lives by focusing on hormone balance and optimization. We're driven to achieve optimal health for both ourselves and our patients. Our commitment is rooted in an integrated, functional approach—examining and addressing the underlying causes of health issues rather than simply alleviating symptoms.",
       subText: "Our commitment to excellence in hormone optimization, regenerative medicine, and aesthetic treatments is backed by years of clinical expertise and cutting-edge technology.",
       ctaButton: "Learn More About Us"
+    },
+    hormoneTherapy: {
+      title: "Bioidentical Hormone Therapy",
+      description: "Experience the transformative power of EvexiPEL, our flagship bioidentical hormone therapy. Using plant-based pellets derived from yams, we deliver sustained, steady hormone optimization tailored to your unique needs.",
+      highlights: [
+        "Personalized treatment plans based on comprehensive lab work",
+        "Minimally invasive procedure with quick recovery",
+        "3-4 month effectiveness for women, 4-6 months for men",
+        "Treatment for fatigue, mood changes, and hormone imbalances"
+      ],
+      ctaButton: "Learn More About HRT",
+      ctaLink: "/faq#hormone-therapy"
     },
     team: {
       title: "Our Team",
@@ -306,7 +343,7 @@ export const siteContent = {
         },
         {
           title: "Thyroid",
-          description: "Expert thyroid management using advanced diagnostics and personalized treatment plans.",
+          description: "A dietary supplement to support thyroid function and health. This is a vegetarian blend of Tyrosine with herbal extracts, vitamins and minerals, not found in other supplements, and includes patented ForsLean Coleius forkskohlii to support the maintenance and proper function of a healthy thyroid.",
           link: "/services#thyroid"
         },
         {
@@ -333,18 +370,18 @@ export const siteContent = {
       subtitle: "Premium supplements and wellness products to support your health journey",
       featured: [
         {
-          title: "Hormone Support",
-          description: "Natural supplements designed to support hormone balance and optimization.",
+          title: "QuiCalm",
+          description: "Helps to reduce the feelings of stress and anxiety, as well as reduce stress related food cravings. QuiCalm contains Relora (extract containing Magnolia officinails and Phellodendron amurense barks), holy basil leaf extract and L-theanine. Good for adrenal fatigue and anxiety. This supplement can be taken up to three times a day",
           link: "/nutraceuticals#hormone-support"
         },
         {
-          title: "Immune Health",
-          description: "Boost your immune system with our carefully selected supplements.",
+          title: "Cognitive Ultra W/ Relora",
+          description: "Supports stress management, appetite control and mood balance. This supplement uses the adaptogenec and neurotonic benefits of Bacopa extra with Relora to support a calm state. This supplement helps stabilize cortisol (the stress hormone), regulates melatonin, increase concentration, and has been shown to reduce stress related cravings.",
           link: "/nutraceuticals#immune-health"
         },
         {
-          title: "Energy & Vitality",
-          description: "Premium supplements to enhance your energy levels and overall vitality.",
+          title: "Synapsin LPT",
+          description: "Bioavailable peptide that supports cognitive function, mental focus, clarity and overall wellbeing. Key benefits include mental agility and focus, energy support and antioxidant protection. Simply chew and swallow 1/2 1 tablet daily.",
           link: "/nutraceuticals#energy"
         }
       ],

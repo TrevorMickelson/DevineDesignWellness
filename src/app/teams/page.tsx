@@ -28,12 +28,12 @@ export default function Teams() {
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 group border border-gray-100"
               >
-                <div className="relative w-full pt-[120%] overflow-hidden">
+                <div className="relative w-full pt-[80%] overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className={`object-cover ${member.name === 'Olivia' ? 'object-[50%_30%] scale-[1.0]' : 'object-[50%_25%] scale-[1.2]'} transition-transform duration-500 group-hover:scale-105`}
+                    className={`object-cover ${member.name === 'Olivia' ? 'object-[50%_35%] scale-[1.0]' : 'object-[50%_30%] scale-[1.1]'} transition-transform duration-500 group-hover:scale-105`}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -69,29 +69,51 @@ export default function Teams() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {content.empoweredTeam.members.map((member, index) => (
-              <a 
-                key={index}
-                href={member.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
-              >
-                <div className="relative w-full pt-[100%]">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    quality={100}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              member.link === '#' ? (
+                <div 
+                  key={index}
+                  className="group bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-200 border border-gray-100"
+                >
+                  <div className="relative w-full pt-[100%]">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      quality={100}
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                    <p className="text-blue-600">{member.role}</p>
+                  </div>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{member.name}</h3>
-                  <p className="text-blue-600">{member.role}</p>
-                </div>
-              </a>
+              ) : (
+                <a 
+                  key={index}
+                  href={member.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
+                >
+                  <div className="relative w-full pt-[100%]">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      quality={100}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{member.name}</h3>
+                    <p className="text-blue-600">{member.role}</p>
+                  </div>
+                </a>
+              )
             ))}
           </div>
         </div>

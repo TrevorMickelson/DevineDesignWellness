@@ -149,6 +149,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hormone Therapy Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">{content.hormoneTherapy.title}</h2>
+            <p className="text-lg text-gray-600 mb-8 text-center">{content.hormoneTherapy.description}</p>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+              {content.hormoneTherapy.highlights.map((highlight, index) => (
+                <div key={index} className="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">{highlight}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link 
+                href={content.hormoneTherapy.ctaLink}
+                className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                {content.hormoneTherapy.ctaButton}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50" id="team">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">{content.team.title}</h2>

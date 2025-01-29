@@ -32,12 +32,6 @@ export default function Nutraceuticals() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-blue-600 mb-2">{product.name}</h3>
                   <p className="text-gray-600">{product.description}</p>
-                  <Link
-                    href="/contact"
-                    className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                  >
-                    Inquire About This Product
-                  </Link>
                 </div>
               </div>
             ))}

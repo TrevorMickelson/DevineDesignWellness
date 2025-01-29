@@ -6,6 +6,34 @@ import { siteContent } from '@/content/site-content'
 export default function Services() {
   const content = siteContent.services
 
+  // Add the price comparison data
+  const hrtComparisonData = {
+    title: "SAMPLE - TESTOSTERONE PELLET VS INJECTABLE CASH COMPARISON CHART",
+    treatments: [
+      {
+        name: "Pellet Therapy (male @ five months)",
+        price: "$725.00",
+        monthly: "$145.00",
+        yearly: "$1,812.50",
+        annualSavings: "$287.50"
+      },
+      {
+        name: "Testosterone Injection (Clinic)",
+        price: "$70.00",
+        monthly: "$280.00",
+        yearly: "$3,360.00",
+        annualSavings: "$1,547.50"
+      },
+      {
+        name: "Testosterone Injection (Take Home)",
+        price: "$175.00",
+        monthly: "$175.00",
+        yearly: "$2,100.00",
+        annualSavings: null
+      }
+    ]
+  }
+
   return (
     <main className="pt-16">
       {/* Hero Section */}
@@ -40,6 +68,41 @@ export default function Services() {
                   
                   <p className="text-lg text-gray-600 mb-8">{service.description}</p>
                   
+                  {/* Add price comparison chart for BHRT service */}
+                  {service.id === 'bhrt' && (
+                    <div className="mt-8 mb-12">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
+                        {hrtComparisonData.title}
+                      </h3>
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse bg-white shadow-sm rounded-lg overflow-hidden">
+                          <thead className="bg-gray-50">
+                            <tr>
+                              <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Treatment Type</th>
+                              <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">Price</th>
+                              <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">Monthly</th>
+                              <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">Yearly</th>
+                              <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">Annual Savings</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-200">
+                            {hrtComparisonData.treatments.map((treatment, index) => (
+                              <tr key={index} className="hover:bg-gray-50">
+                                <td className="px-6 py-4 text-sm text-gray-900">{treatment.name}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900 text-right">{treatment.price}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900 text-right">{treatment.monthly}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900 text-right">{treatment.yearly}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900 text-right">
+                                  {treatment.annualSavings ? treatment.annualSavings : '-'}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="space-y-6">
                     <h3 className="text-xl font-semibold text-gray-900">Key Benefits</h3>
                     <ul className="grid md:grid-cols-2 gap-4">
@@ -55,20 +118,6 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
-
-                  {!service.comingSoon && (
-                    <div className="mt-10 text-center">
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors gap-2"
-                      >
-                        Schedule Consultation
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
