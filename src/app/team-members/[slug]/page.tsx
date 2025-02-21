@@ -127,6 +127,12 @@ const teamMembers = {
   }
 }
 
+export function generateStaticParams() {
+  return Object.keys(teamMembers).map((slug) => ({
+    slug: slug,
+  }))
+}
+
 export default function TeamMemberPage() {
   const params = useParams()
   const slug = params.slug as string
