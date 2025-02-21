@@ -17,4 +17,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app; img-src 'self' data: blob: *.unsplash.com; media-src 'self' data: blob:; connect-src 'self' *.netlify.app;" 
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.google.com *.gstatic.com *.googleapis.com; img-src 'self' data: blob: *.unsplash.com *.googleapis.com *.gstatic.com; media-src 'self' data: blob:; connect-src 'self' *.netlify.app *.google.com *.googleapis.com; frame-src 'self' *.google.com;" 
