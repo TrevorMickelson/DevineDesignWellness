@@ -1,5 +1,5 @@
 [build]
-  command = "next build"
+  command = "npm run build"
   publish = ".next"
 
 [build.environment]
@@ -15,4 +15,6 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff" 
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app; img-src 'self' data: blob: *.unsplash.com; media-src 'self' data: blob:; connect-src 'self' *.netlify.app;" 

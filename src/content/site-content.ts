@@ -6,6 +6,7 @@ export const siteContent = {
     },
     navigation: [
       { text: "Home", href: "/" },
+      { text: "About", href: "/about" },
       { text: "Services", href: "/services" },
       { text: "Nutraceuticals", href: "/nutraceuticals" },
       { text: "Our Team", href: "/teams" },
@@ -265,11 +266,36 @@ export const siteContent = {
       description: "Divine Design Wellness is located in Decatur TX, and is part of the Empowered Life collective.",
       ctaButton: "Contact Us"
     },
+    reviews: {
+      title: "What Our Patients Say",
+      testimonials: [
+        {
+          text: "I came to Kelly with many questions and concerns having to do with my current rigment for wellness and fitness. My fitness goals and lifestyle goals were addressed and she gave me recommendations and options tailored to me that would assist me in getting to my desired goals. She is very educated on everything she spoke to me about and provided very helpful educational materials. I'm excited to begin my new health journey with Kelly's expertise guiding the way!",
+          author: "John Angeles",
+          rating: 0
+        },
+        {
+          text: "I had previously been on TRT and decided to give the pellets a try after talking with Kelly. She was extremely knowledeable and helpful with all of my questions/concerns. Scheduling was very easy, the appointment was quick. She also checked in on me after to make sure everything was healing properly and to answer and questions that may have come up. 10/10 recommend!",
+          author: "Cody Gustavson",
+          rating: 0
+        },
+        {
+          text: "Kelly and I met outside of the office. I learned quickly that she has a passion for her boys and the biggest heart for helping others. I couldn't get the answers or results I was looking for and that all changed faster my first appointment. Kelly listens and asks lots of questions!!! She is going to help you optimize your health and find the right anwsers for you. I know I am a priority to her and that feels amazing!",
+          author: "Darla Martin",
+          rating: 0
+        },
+        {
+          text: "Kelly and her team are amazing! They have answered any questions or concerns quickly and efficiently! The first time I went there, made me feel comfortable and welcomed. Highly recommend!!",
+          author: "Ginger B. Shepherd",
+          rating: 0
+        }
+      ]
+    },
     about: {
       title: "About Us",
-      mainText: "At Divine Design Wellness, our goal is to enrich lives by focusing on hormone balance and optimization. We're driven to achieve optimal health for both ourselves and our patients. Our commitment is rooted in an integrated, functional approach—examining and addressing the underlying causes of health issues rather than simply alleviating symptoms.",
-      subText: "Our commitment to excellence in hormone optimization, regenerative medicine, and aesthetic treatments is backed by years of clinical expertise and cutting-edge technology.",
-      ctaButton: "Learn More About Us"
+      description: "We are Kelly Swofford and Olivia Hillard, with Divine Design Wellness! We are 2 Nurse Practitioners that have been in womens health for many years and committed to overall wellness, health & a traditional, natural approach to healthcare.",
+      ctaButton: "Learn More About Us",
+      ctaLink: "/about"
     },
     hormoneTherapy: {
       title: "Bioidentical Hormone Therapy",
@@ -290,7 +316,16 @@ export const siteContent = {
         {
           name: "Olivia",
           role: "Women's Health Nurse Practitioner",
-          image: "/assets/Olivia.JPEG"
+          image: "/assets/Olivia.JPEG",
+          bio: "Olivia is a compassionate and dedicated Women's Health Nurse Practitioner who believes deeply in the power of listening, understanding, and empowering women. After graduating from Tarleton State University with a Bachelor of Science in Nursing, Olivia began her nursing profession in Labor and Delivery, where she worked from 2018 to 2024. During this time, she experienced firsthand the challenges many women face, especially in moments of vulnerability. It was through her own personal journey with perinatal depression that Olivia felt God's calling to care for women in a more profound way. Guided by her faith, she went on to earn her Masters of Science in Nursing from Texas Woman's University in 2024 and became a board-certified Women's Health Nurse Practitioner.\n\nOlivia specializes in gynecology, hormone replacement therapy, and wellness, with a unique focus on uncovering the root causes of health issues rather than simply treating symptoms. She is passionate about helping women find their voice and gain the confidence to take control of their health. In partnership with Vita10 IV, Olivia works to optimize health and educate her patients on how to become the healthiest, most empowered versions of themselves.\n\nOlivia's mission is driven by her desire to create a supportive, non-judgmental space for women to heal and thrive. When she isn't caring for her patients, Olivia enjoys spending time with her beloved children—Ryder, Maci, Waylon, and Holly—and cherishes the moments that allow her to nurture both her family and her faith.",
+          specialties: [
+            "Women's Health",
+            "Hormone Replacement Therapy",
+            "Gynecology",
+            "Holistic Wellness",
+            "Perinatal Care",
+            "IV Therapy"
+          ]
         },
         {
           name: "Kelly",
@@ -393,29 +428,17 @@ export const siteContent = {
   about: {
     hero: {
       title: "About Divine Design Wellness",
-      subtitle: "Excellence in Integrative Healthcare"
+      subtitle: "Hi Y'all!"
     },
     welcome: {
-      mainText: "At Divine Design Wellness, we are committed to redefining healthcare through an integrative approach that harmoniously combines advanced medical science with personalized attention. Our state-of-the-art wellness center serves as a sanctuary where cutting-edge treatments meet compassionate care.",
-      subText: "Under the leadership of our board-certified medical professionals, we deliver evidence-based treatments tailored to your unique health profile. Our approach focuses on identifying and addressing root causes rather than just managing symptoms, ensuring sustainable health outcomes.",
-      features: {
-        title: "What distinguishes our practice:",
-        list: [
-          "Comprehensive Health Assessment & Monitoring",
-          "Advanced Diagnostic Technologies",
-          "Integrative Treatment Protocols",
-          "Board-Certified Medical Team",
-          "Evidence-Based Therapeutic Approaches"
-        ]
-      },
-      conclusion: "Our expertise spans hormone optimization, regenerative medicine, aesthetic treatments, and wellness therapies. We leverage the latest medical advancements while maintaining a patient-centered approach, ensuring that each treatment plan is as unique as the individual it serves."
+      mainText: "We are Kelly Swofford and Olivia Hillard, with Divine Design Wellness! We are 2 Nurse Practitioners that have been in womens health for many years and committed to overall wellness, health & a traditional, natural approach to healthcare. We offer comprehensive wellness screens/visits & focus on hormone management. In the near future we will be adding IV therapy, partnering with Vita10, and sick visits geared towards holistic treatment."
     },
-    mainText: "At Divine Design Wellness, our goal is to enrich lives by focusing on hormone balance and optimization. We're driven to achieve optimal health for both ourselves and our patients. Our commitment is rooted in an integrated, functional approach—examining and addressing the underlying causes of health issues rather than simply alleviating symptoms.",
-    values: [
-      "Integrative Healthcare Excellence",
-      "Personalized Patient Care",
-      "Advanced Treatment Solutions"
-    ]
+    mainText: "Are you sick and tired of being sick and tired? Feel unsure if perimenopause is kicking your butt, or if life after menopause means it all just goes to the wayside? It doesn't have to! We believe in a holistic, whole body approach to healthcare- that looks at the root cause of issues and aims to get you healthy and having a good quality of life.",
+    contactInfo: {
+      callToAction: "To schedule a visit, please call or text",
+      phone: "940-268-4412"
+    },
+    closing: "We look forward to working with you!"
   },
 
   // Teams Page
@@ -427,21 +450,30 @@ export const siteContent = {
     teamMembers: [
       {
         name: "Olivia",
-        role: "Nurse Practitioner",
+        role: "Women's Health Nurse Practitioner",
         image: "/assets/Olivia.JPEG",
-        bio: "Women's Health Nurse Practitioner",
-        specialties: []
+        bio: "Olivia is a compassionate and dedicated Women's Health Nurse Practitioner who believes deeply in the power of listening, understanding, and empowering women. After graduating from Tarleton State University with a Bachelor of Science in Nursing, Olivia began her nursing profession in Labor and Delivery, where she worked from 2018 to 2024. During this time, she experienced firsthand the challenges many women face, especially in moments of vulnerability. It was through her own personal journey with perinatal depression that Olivia felt God's calling to care for women in a more profound way. Guided by her faith, she went on to earn her Masters of Science in Nursing from Texas Woman's University in 2024 and became a board-certified Women's Health Nurse Practitioner.\n\nOlivia specializes in gynecology, hormone replacement therapy, and wellness, with a unique focus on uncovering the root causes of health issues rather than simply treating symptoms. She is passionate about helping women find their voice and gain the confidence to take control of their health. In partnership with Vita10 IV, Olivia works to optimize health and educate her patients on how to become the healthiest, most empowered versions of themselves.\n\nOlivia's mission is driven by her desire to create a supportive, non-judgmental space for women to heal and thrive. When she isn't caring for her patients, Olivia enjoys spending time with her beloved children—Ryder, Maci, Waylon, and Holly—and cherishes the moments that allow her to nurture both her family and her faith.",
+        specialties: [
+          "Women's Health",
+          "Hormone Replacement Therapy",
+          "Gynecology",
+          "Holistic Wellness",
+          "Perinatal Care",
+          "IV Therapy"
+        ]
       },
       {
         name: "Kelly",
-        role: "Nurse Practitioner",
+        role: "Family Nurse Practitioner & Certified Nurse Midwife",
         image: "/assets/Kelly.JPEG",
-        bio: "Family Nurse Practitioner, Certified Nurse Midwife",
+        bio: "Kelly completed her undergraduate studies at Texas Christian University (Go Frogs!) with a bachelor of science in nursing in 2011. As an RN, she worked at Parkland hospital in the Burn ICU for several years, then moved over to the Fort Worth side and worked at Harris Methodist Ft Worth in the Trauma ICU and then finished her time as an RN at Cook Childrens in the Cardiac ICU/PICU.\n\nDuring her time at Cook Childrens, she started her Masters of Science in Nursing. During her graduate program, God had bigger plans and she welcomed her first son, Noah, into the world- 6 weeks early. She became a patient in her own job space (being a NICU mom on the other side definitely gives some new perspective!) and wrote many papers from the NICU while Noah was there for 6 weeks. Not but 18 months later, she welcomed her second son, Logan, into the world (God does have a sense of humor!). This pregnancy came with hospital bedrest after 22 weeks until he was born at 35 weeks- so obviously school had to go on hold and momming a 1 year old when you're stuck in the hospital- was HARD but thank God for family that brought Noah to visit almost daily. Logan was also a NICU baby and we got to spend a month at Cooks again.\n\nFinally, in 2017, she completed her Masters of Science in Nursing and passed her national boards to become a Family Nurse Practitioner.\n\nThe first job offer came from her womens health/OBGYN preceptor, Dr Edwards, and she hoped on it- not knowing a thing about womens health, other than she had delivered her own 2 babies and had suffered postpartum depression greatly. She developed a love for womens health and pregnant mommas and babies but always leaned on the more holistic route for care. This love drove her to yet again, go back to school and get her post-graduate certification to be a Certified Nurse Midwife (CNM). Since then, her love for holistic wellness and primary care for an individual person has always thrived.\n\nKelly also runs a special group for moms of stillborn children/infant loss- called Still Hopeful, that meets in Decatur. She has always had a heart for these mamas and has a story dear to her heart that likely motivates why she feels so passionate about bringing this group together to link hands together through that journey.\n\nOutside of being and NP/CNM, she finds her main identity in being a Jesus loving mama and enjoys running and baking sourdough. God is so good and leads every interaction she has with her patients, so she is so excited to meet you!",
         specialties: [
           "Hormone Optimization",
           "Thyroid Management",
           "Weight Management",
-          "Women's Health"
+          "Women's Health",
+          "Holistic Wellness",
+          "Pregnancy & Postpartum Care"
         ]
       }
     ],
@@ -523,4 +555,4 @@ export const siteContent = {
       submitButton: "Send Message"
     }
   }
-} 
+}

@@ -1,9 +1,23 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { siteContent } from '@/content/site-content'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   const content = siteContent.home
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prevIndex) => 
+        prevIndex === content.reviews.testimonials.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 5000) // Rotate every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [content.reviews.testimonials.length])
 
   return (
     <main className="min-h-screen pt-24">
@@ -35,9 +49,6 @@ export default function Home() {
                 <p className="text-xl text-slate-600 mb-6 text-center">
                   {content.hero.description}
                 </p>
-                <p className="text-lg text-slate-600 mb-8 text-center leading-relaxed">
-                  {content.about.mainText}
-                </p>
                 <div className="text-center">
                   <Link 
                     href="/contact" 
@@ -50,6 +61,82 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">
+            {content.reviews.title}
+          </h2>
+          <div className="max-w-4xl mx-auto mt-12 relative">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out"
+                style={{ transform: `translateX(-${currentTestimonialIndex * 100}%)` }}
+              >
+                {content.reviews.testimonials.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 px-6"
+                  >
+                    <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+                      <div className="flex justify-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className="w-6 h-6 text-yellow-400"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <p className="text-gray-700 text-lg italic mb-6">"{testimonial.text}"</p>
+                      <p className="text-blue-600 font-semibold">{testimonial.author}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center mt-8 space-x-2">
+              {content.reviews.testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2.5 h-2.5 rounded-full transition-colors duration-200 ${
+                    index === currentTestimonialIndex ? 'bg-blue-600' : 'bg-gray-300'
+                  }`}
+                  onClick={() => setCurrentTestimonialIndex(index)}
+                  aria-label={`Go to review ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-24 bg-white" id="about">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">{content.about.title}</h2>
+              <p className="text-xl text-gray-700 leading-relaxed mb-10">
+                {content.about.description}
+              </p>
+              <Link 
+                href={content.about.ctaLink}
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              >
+                {content.about.ctaButton}
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
