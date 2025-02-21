@@ -1,7 +1,4 @@
-'use client'
-
 import Image from 'next/image'
-import { useParams } from 'next/navigation'
 import { notFound } from 'next/navigation'
 
 const teamMembers = {
@@ -133,9 +130,14 @@ export function generateStaticParams() {
   }))
 }
 
-export default function TeamMemberPage() {
-  const params = useParams()
-  const slug = params.slug as string
+type Props = {
+  params: {
+    slug: string
+  }
+}
+
+export default function TeamMemberPage({ params }: Props) {
+  const { slug } = params
   const member = teamMembers[slug as keyof typeof teamMembers]
 
   if (!member) {
