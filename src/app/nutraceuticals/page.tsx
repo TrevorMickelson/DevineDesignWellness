@@ -3,9 +3,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { siteContent } from '@/content/site-content'
+import { useState, useEffect } from 'react'
 
 export default function Nutraceuticals() {
   const content = siteContent.nutraceuticals
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768)
+    const handleResize = () => setIsMobile(window.innerWidth <= 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <main className="pt-16">
@@ -14,6 +23,47 @@ export default function Nutraceuticals() {
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl font-bold text-white mb-4">{content.hero.title}</h1>
           <p className="text-xl text-white">{content.hero.subtitle}</p>
+        </div>
+      </section>
+
+      {/* QR Code Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 p-8 bg-gray-50 rounded-2xl shadow-lg">
+            <div className="w-64 h-64 relative bg-white p-4 rounded-xl shadow-md border-2 border-blue-100">
+              <Image
+                src="/assets/nutra_qr_code.png"
+                alt="Scan to order nutraceuticals"
+                width={256}
+                height={256}
+                className="object-contain"
+                priority
+                onError={(e) => {
+                  console.error('QR Code image failed to load at path:', '/assets/nutra_qr_code.png');
+                  e.currentTarget.style.display = 'none';
+                }}
+                onLoad={() => {
+                  console.log('QR Code image loaded successfully');
+                }}
+              />
+            </div>
+            <div className="text-center md:text-left md:flex-1">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Order</h2>
+              <p className="text-xl text-gray-600 mb-6">
+                Access our complete nutraceutical catalog and place your order:
+              </p>
+              <div className="flex flex-col gap-4">
+                <Link 
+                  href="https://fullscript.com/wellevate/devine-design-wellness"
+                  target="_blank"
+                  className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  <i className="fas fa-link text-xl"></i>
+                  <span>{isMobile ? 'Tap here' : 'Click here'} to order now</span>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
