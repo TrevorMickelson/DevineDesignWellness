@@ -44,22 +44,13 @@ export default function Contact() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-2">{content.info.phone.title}</h3>
-                      <div className="flex flex-col space-y-2">
-                        <a 
-                          href={`tel:${content.info.phone.number.replace(/\D/g,'')}`}
-                          className="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                          <i className="fas fa-phone-alt mr-2"></i>
-                          <span>Call {content.info.phone.number}</span>
-                        </a>
-                        <a 
-                          href={`sms:${content.info.phone.number.replace(/\D/g,'')}`}
-                          className="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                          <i className="fas fa-comment mr-2"></i>
-                          <span>Text {content.info.phone.number}</span>
-                        </a>
-                      </div>
+                      <a 
+                        href={`tel:${content.info.phone.number.replace(/\D/g,'')}`}
+                        className="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                      >
+                        <i className="fas fa-phone-alt mr-2"></i>
+                        <span>Call or Text: {content.info.phone.number}</span>
+                      </a>
                     </div>
                   </div>
                   <div>

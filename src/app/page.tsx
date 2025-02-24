@@ -351,12 +351,15 @@ export default function Home() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-2xl mb-3">{content.contact.phone.title}</h3>
-                    <a 
-                      href={`tel:${content.contact.phone.number.replace(/\D/g,'')}`} 
-                      className="text-lg text-gray-700 hover:text-blue-600 transition-colors leading-relaxed inline-block"
-                    >
-                      {content.contact.phone.number}
-                    </a>
+                    <div className="flex flex-col space-y-2">
+                      <a 
+                        href={`tel:${content.contact.phone.number.replace(/\D/g,'')}`}
+                        className="inline-flex items-center text-lg text-gray-700 hover:text-blue-600 transition-colors"
+                      >
+                        <i className="fas fa-phone-alt mr-2"></i>
+                        <span>Call or Text: {content.contact.phone.number}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-4 pt-6">
