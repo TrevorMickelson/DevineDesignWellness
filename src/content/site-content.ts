@@ -31,7 +31,7 @@ export const siteContent = {
     contactInfo: {
       title: "Contact Info",
       address: {
-        lines: ["100 W. Walnut", "Decatur, TX"]
+        lines: ["117 W Main St", "Decatur, TX 76234"]
       },
       phone: "(940) 268-4412"
     },
@@ -338,7 +338,7 @@ export const siteContent = {
     contact: {
       location: {
         title: "Location",
-        address: ["100 W. Walnut", "Decatur, TX"]
+        address: ["117 W Main St", "Decatur, TX 76234"]
       },
       phone: {
         title: "Phone",
@@ -517,7 +517,7 @@ export const siteContent = {
     info: {
       location: {
         title: "Location",
-        address: ["100 W. Walnut", "Decatur, TX"]
+        address: ["117 W Main St", "Decatur, TX 76234"]
       },
       phone: {
         title: "Phone",
