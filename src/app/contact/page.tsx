@@ -63,11 +63,10 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="flex-1 min-h-[300px] rounded-lg overflow-hidden shadow-lg">
+              <div className="flex-1 min-h-[400px] w-full rounded-lg overflow-hidden shadow-lg relative">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.9555466662837!2d-97.58549792439566!3d33.23421617262332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d8555555555555%3A0x555555555555555!2s100%20W%20Walnut%20St%2C%20Decatur%2C%20TX%2076234!5e0!3m2!1sen!2sus!4v1699392547906!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.9555466662837!2d-97.58549792439566!3d33.23421617262332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d8555555555555%3A0x555555555555555!2s117%20W%20Main%20St%2C%20Decatur%2C%20TX%2076234!5e0!3m2!1sen!2sus!4v1699392547906!5m2!1sen!2sus"
+                  className="absolute inset-0 w-full h-full"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"

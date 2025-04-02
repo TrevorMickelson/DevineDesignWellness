@@ -27,8 +27,10 @@ export default function Home() {
             src="/assets/Kelly_And_Olivia_1.JPEG"
             alt="Divine Design Wellness"
             fill
-            className="object-cover object-top"
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={85}
+            className="object-cover object-top"
           />
         </div>
         <div className="container mx-auto px-6 relative">
@@ -38,8 +40,10 @@ export default function Home() {
                 src="/assets/Kelly_And_Olivia_1.JPEG"
                 alt="Divine Design Wellness"
                 fill
-                className="object-cover object-top"
                 priority
+                sizes="100vw"
+                quality={85}
+                className="object-cover object-top"
               />
             </div>
             <div className="hidden md:block" aria-hidden="true"></div>
@@ -380,7 +384,7 @@ export default function Home() {
             </div>
             <div className="h-[500px] rounded-lg overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.9555466662837!2d-97.58549792439566!3d33.23421617262332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d8555555555555%3A0x555555555555555!2s100%20W%20Walnut%20St%2C%20Decatur%2C%20TX%2076234!5e0!3m2!1sen!2sus!4v1699392547906!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.9555466662837!2d-97.58549792439566!3d33.23421617262332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864d8555555555555%3A0x555555555555555!2s117%20W%20Main%20St%2C%20Decatur%2C%20TX%2076234!5e0!3m2!1sen!2sus!4v1699392547906!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
