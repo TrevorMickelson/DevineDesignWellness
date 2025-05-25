@@ -118,6 +118,19 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
+
+                    {service.link && (
+                      <div className="flex flex-col gap-4">
+                        <Link 
+                          href={service.link}
+                          target="_blank"
+                          className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-12"
+                        >
+                          <i className="fas fa-link text-xl"></i>
+                          <span>Click to view</span>
+                        </Link>
+                      </div>
+                    )}
                 </div>
               </div>
             ))}

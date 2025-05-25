@@ -242,12 +242,25 @@ export const siteContent = {
         ]
       },
       {
+        id: "well-women-exam",
+        title: "Well Women Exam",
+        description: "Overall women's wellness",
+        image: "https://images.unsplash.com/photo-1631815589654-b2a4d6fa7ee3",
+        comingSoon: false,
+        availableDate: "March 2025",
+        benefits: [
+          "Pap smears (eligible for insurance)",
+          "Breast screening",
+        ]
+      },
+      {
         id: "iv-therapy",
         title: "IV Therapy",
-        description: "Advanced IV therapy treatments for optimal nutrient delivery and health support. (Coming March 2025)",
+        description: "Advanced IV therapy treatments for optimal nutrient delivery and health support.",
         image: "https://images.unsplash.com/photo-1631815589654-b2a4d6fa7ee3",
-        comingSoon: true,
+        comingSoon: false,
         availableDate: "March 2025",
+        link: "https://vita10therapy.com",
         benefits: [
           "Rapid nutrient delivery",
           "Enhanced hydration",
