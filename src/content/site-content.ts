@@ -277,12 +277,41 @@ export const siteContent = {
       },
       {
         id: "well-women-exam",
-        title: "Well Women Exam",
+        title: "Well Women Exams",
         description: "Overall women's wellness",
         image: "https://images.unsplash.com/photo-1631815589654-b2a4d6fa7ee3",
         comingSoon: false,
         availableDate: "March 2025",
         benefits: ["Pap smears (eligible for insurance)", "Breast screening"],
+      },
+      {
+        id: "postpartum-care",
+        title: "Postpartum Depression & Care",
+        description:
+          "Compassionate screening, treatment, and ongoing support for postpartum depression and overall postpartum wellness.",
+        image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+        comingSoon: false,
+        benefits: [
+          "Screening and assessment for postpartum depression/anxiety",
+          "Personalized care plans and follow-up",
+          "Hormone evaluation and management when appropriate",
+          "Referrals for counseling and community resources",
+        ],
+      },
+      {
+        id: "ultra-femme-360",
+        title: "Ultra Femme 360",
+        description:
+          "ULTRA FEMME 360 is an innovative, safe, and effective non-surgical alternative to vaginoplasty and labiaplasty procedures. Ultra Femme is the only technology of its kind providing complete vaginal rejuvenation including labial remodeling (labia reduction) and vaginal tightening with a single device. It uses the body's natural processes to stimulate collagen production and restore the vaginal and vulvar areas to a more youthful state.",
+        image: "https://images.unsplash.com/photo-1582750485006-0f2cf1f04d64",
+        comingSoon: false,
+        benefits: [
+          "Tightening of the vaginal opening",
+          "Tightening of the vaginal canal",
+          "Tightening of the perineum",
+          "An increase in blood flow to the clitoris, improving its sensitivity and heightening sexual sensation",
+          "A decrease in stress incontinence and strengthening of the vaginal muscles",
+        ],
       },
       {
         id: "iv-therapy",
@@ -408,6 +437,12 @@ export const siteContent = {
       subtitle: "Comprehensive wellness solutions tailored to your needs",
       viewAllText: "View All Services",
       featured: [
+        {
+          title: "Ultra Femme 360",
+          description:
+            "Non-surgical vaginal rejuvenation for tightening, improved sensitivity, and pelvic floor support.",
+          link: "/services#ultra-femme-360",
+        },
         {
           title: "Bioidentical HRT",
           description:
