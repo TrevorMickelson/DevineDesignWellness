@@ -34,7 +34,7 @@ export default function Teams() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className={`object-cover ${member.name === 'Olivia' ? 'object-[50%_25%]' : 'object-[50%_30%]'}`}
+                    className={`object-cover object-[55%_2%]`}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority
                   />
@@ -50,7 +50,7 @@ export default function Teams() {
                   
                   {/* Bio Sections */}
                   <div className="space-y-8 text-gray-600">
-                    {member.name === "Kelly" ? (
+                    {member.name === "Kelly" && (
                       <>
                         <div>
                           <h4 className="text-lg font-semibold text-gray-900 mb-3">Education & Early Career</h4>
@@ -90,29 +90,6 @@ export default function Teams() {
                           <h4 className="text-lg font-semibold text-gray-900 mb-3">Personal Note</h4>
                           <p className="leading-relaxed">
                             Outside of being and NP/CNM, she finds her main identity in being a Jesus loving mama and enjoys running and baking sourdough. God is so good and leads every interaction she has with her patients, so she is so excited to meet you!
-                          </p>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-3">Background & Education</h4>
-                          <p className="leading-relaxed">
-                            Olivia is a compassionate and dedicated Women's Health Nurse Practitioner who believes deeply in the power of listening, understanding, and empowering women. After graduating from Tarleton State University with a Bachelor of Science in Nursing, Olivia began her nursing profession in Labor and Delivery, where she worked from 2018 to 2024. During this time, she experienced firsthand the challenges many women face, especially in moments of vulnerability. It was through her own personal journey with perinatal depression that Olivia felt God's calling to care for women in a more profound way. Guided by her faith, she went on to earn her Masters of Science in Nursing from Texas Woman's University in 2024 and became a board-certified Women's Health Nurse Practitioner.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-3">Specializations & Approach</h4>
-                          <p className="leading-relaxed">
-                            Olivia specializes in gynecology, hormone replacement therapy, and wellness, with a unique focus on uncovering the root causes of health issues rather than simply treating symptoms. She is passionate about helping women find their voice and gain the confidence to take control of their health. In partnership with Vita10 IV, Olivia works to optimize health and educate her patients on how to become the healthiest, most empowered versions of themselves.
-                          </p>
-                        </div>
-
-                        <div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-3">Personal Mission & Life</h4>
-                          <p className="leading-relaxed">
-                            Olivia's mission is driven by her desire to create a supportive, non-judgmental space for women to heal and thrive. When she isn't caring for her patients, Olivia enjoys spending time with her beloved children—Ryder, Maci, Waylon, and Holly—and cherishes the moments that allow her to nurture both her family and her faith.
                           </p>
                         </div>
                       </>

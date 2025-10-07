@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative min-h-[calc(100vh-6rem)] flex items-center bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
         <div className="absolute top-0 left-0 w-1/2 h-[calc(100vh-6rem)] md:block hidden">
           <Image
-            src="/assets/Kelly_And_Olivia_1.JPEG"
+            src="/assets/kelly-hero2.JPEG"
             alt="Divine Design Wellness"
             fill
             priority
@@ -37,7 +37,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 items-center min-h-[calc(100vh-6rem)]">
             <div className="relative min-h-[50vh] md:h-auto block md:hidden -mx-6">
               <Image
-                src="/assets/Kelly_And_Olivia_1.JPEG"
+              src="/assets/kelly-hero2.JPEG"
                 alt="Divine Design Wellness"
                 fill
                 priority
@@ -276,7 +276,7 @@ export default function Home() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[55%_2%]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>

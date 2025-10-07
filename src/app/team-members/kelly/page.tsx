@@ -21,10 +21,10 @@ export default function KellyPage() {
               <div className="md:col-span-1">
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-lg mb-6">
                   <Image
-                    src="/assets/Kelly.JPEG"
+                    src="/assets/kelly-hero.JPEG"
                     alt={member.name}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-[55%_2%]"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
